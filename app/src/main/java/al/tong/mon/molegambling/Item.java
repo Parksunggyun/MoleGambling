@@ -4,28 +4,19 @@ public class Item {
 
     private int sequence;
     private String Color;
+    private int unPressed;
+    private int pressed;
     private boolean press = false;
-    private boolean touch = false;
 
-    public Item(int sequence, String color) {
+    public Item(int sequence, String color, int unPressed, int pressed) {
         this.sequence = sequence;
         Color = color;
-    }
-
-    public void setSequence(int sequence) {
-        this.sequence = sequence;
-    }
-
-    public void setColor(String color) {
-        Color = color;
+        this.unPressed = unPressed;
+        this.pressed = pressed;
     }
 
     public void setPress(boolean press) {
         this.press = press;
-    }
-
-    public void setTouch(boolean touch) {
-        this.touch = touch;
     }
 
     public int getSequence() {
@@ -36,11 +27,15 @@ public class Item {
         return Color;
     }
 
-    public boolean isPress() {
-        return press;
+    public int getUnPressed() {
+        return unPressed;
     }
 
-    public boolean isTouch() {
-        return touch;
+    public int getPressed() {
+        return pressed;
+    }
+
+    public boolean isPress() {
+        return press;
     }
 }

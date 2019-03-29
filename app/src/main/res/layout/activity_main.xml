@@ -9,6 +9,21 @@
             android:layout_height="match_parent"
             tools:context=".MainActivity">
 
+        <android.support.v7.widget.RecyclerView
+                android:overScrollMode="never"
+                android:background="@null"
+                android:paddingStart="161dp"
+                android:paddingEnd="161dp"
+                android:paddingTop="188.6dp"
+                android:paddingBottom="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/colorBtnListView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
         <android.support.v7.widget.AppCompatImageView
                 android:id="@+id/currLevelImgView"
                 android:src="@drawable/icon_game_level1"
@@ -33,15 +48,17 @@
                 android:layout_height="50.6dp"/>
 
         <android.support.v7.widget.RecyclerView
-                android:layout_marginStart="126.8dp"
-                android:layout_marginEnd="126.8dp"
-                android:layout_marginTop="166dp"
-                android:layout_marginBottom="8dp"
-                android:id="@+id/colorBtnListView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-        </android.support.v7.widget.RecyclerView>
+                android:overScrollMode="never"
+                android:elevation="4dp"
+                android:paddingStart="58.6dp"
+                android:background="@drawable/bordoer_white"
+                android:id="@+id/questCircleListView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="35.4dp"
+                android:layout_width="733.4dp"
+                android:layout_height="113.4dp"/>
 
         <View
                 android:visibility="gone"

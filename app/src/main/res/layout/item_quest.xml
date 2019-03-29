@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/circleCardView"
+            android:src="@drawable/border_mole_quest_red"
+            android:layout_marginTop="23.4dp"
+            android:layout_marginBottom="23.4dp"
+            android:layout_marginEnd="23.4dp"
+            android:layout_width="66.6dp"
+            android:layout_height="66.6dp">
+
+    </android.support.v7.widget.AppCompatImageView>
+</layout>

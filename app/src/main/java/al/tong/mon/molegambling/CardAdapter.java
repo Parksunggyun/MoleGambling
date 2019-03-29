@@ -19,6 +19,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
     }
 
     private int width = 0, height = 0;
+
     @NonNull
     @Override
     public CardViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -33,6 +34,31 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
             binding.cardView.getLayoutParams().width = width;
             binding.cardView.getLayoutParams().height = height;
         }
+        Item item = items.get(position);
+        int seq = item.getSequence();
+        int unPressed = item.getUnPressed();
+        int pressed = item.getPressed();
+        boolean press = item.isPress();
+        binding.cardView.setImageResource(unPressed);
+        binding.cardView.setOnClickListener(view -> {
+            if(seq != -2) {
+                if (!press) {
+                    binding.cardView.setImageResource(pressed);
+                    item.setPress(true);
+                }
+            }
+        });
+/*
+        switch (seq) {
+            case -1:
+                break;
+            case -2:
+                break;
+            default:
+                break;
+        }
+*/
+
     }
 
     @Override
@@ -45,9 +71,9 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
         notifyDataSetChanged();
     }
 
-    public void setSize(int length) {
-        this.width = length;
-        this.height = length;
+    public void setSize(int width, int height) {
+        this.width = width;
+        this.height = height;
     }
 
     class CardViewHolder extends RecyclerView.ViewHolder {
